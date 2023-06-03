@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       Weather App
       <a
+        rel="noreferrer"
         href="https://github.com/SaharQ1986/SheCodes-Weather-React-App.git"
         target="_blank"
       ></a>

@@ -1,3 +1,4 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  max-width: 500px;
+  margin: 30px auto;
+}

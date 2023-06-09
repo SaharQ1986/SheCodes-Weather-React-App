@@ -30,7 +30,7 @@
   list-style: none;
 }
 
-.weather img {
+.weather canvas {
   margin-bottom: 12px;
 }
 .weather .temp {

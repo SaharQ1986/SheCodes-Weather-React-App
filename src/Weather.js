@@ -13,7 +13,7 @@ function Weather(props) {
       ready: true,
       city: response.data.name,
       temp: response.data.main.temp,
-      icon: "https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png",
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,

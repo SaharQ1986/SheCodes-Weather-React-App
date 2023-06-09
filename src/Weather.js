@@ -14,7 +14,7 @@ function Weather(props) {
       temp: response.data.main.temp,
       icon: "https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png",
       description: response.data.weather[0].description,
-      time: "Sunday 10:20",
+      time: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humd: response.data.main.humidity,
     });
@@ -70,7 +70,9 @@ function Weather(props) {
     );
   } else {
     const apiKey = "50c2acd53349fabd54f52b93c8650d37";
-    let url = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+
     axios.get(url).then(showCityWeather);
 
     return "Loading ...";

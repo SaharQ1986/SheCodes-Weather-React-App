@@ -69,8 +69,8 @@ function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+    const apiKey = "50c2acd53349fabd54f52b93c8650d37";
+    let url = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(url).then(showCityWeather);
 
     return "Loading ...";

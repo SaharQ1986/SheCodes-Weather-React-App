@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
+import "bootstrap/dist/css/bootstrap.css";
+import "./Weather.css";
+
 function WeatherUnits(props) {
   const [unit, setUnit] = useState("celsius ");
+
   function convertFahrenheitHandler(e) {
     e.preventDefault();
     setUnit("fahrenheit");
@@ -25,10 +29,29 @@ function WeatherUnits(props) {
       </div>
     );
   } else {
-    let fahrenheit = (props.celsius * 9) / 5 + 32;
+    function fahrenheit() {
+      return (props.celsius * 9) / 5 + 32;
+    }
 
     return (
       <div className="WeatherUnits">
+        <span className="temp">{Math.round(fahrenheit())}</span>
+        <span className="unit">
+          {" "}
+          <a href="/" onClick={convertCelsiusHandler}>
+            °C
+          </a>{" "}
+          | °F{" "}
+        </span>
+      </div>
+    );
+  }
+}
+
+export default WeatherUnits;
+
+{
+  /* <div className="WeatherUnits">
         <span className="temp">{Math.round(fahrenheit)}</span>
         <span className="unit">
           {" "}
@@ -38,9 +61,5 @@ function WeatherUnits(props) {
           </a>{" "}
           | °F
         </span>
-      </div>
-    );
-  }
+      </div> */
 }
-
-export default WeatherUnits;

@@ -5,3 +5,10 @@
 h1 {
   text-align: center;
 }
+.App p {
+  font-size: 16px;
+  margin-top: 0 auto;
+  text-align: left;
+  margin-left: 16px;
+  padding: 0;
+}

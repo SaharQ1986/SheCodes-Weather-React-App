@@ -10,13 +10,21 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Weather App</h1>
-        <Weather defaultCity="New Yrok" />
-        <a
-          rel="noreferrer"
-          href="https://github.com/SaharQ1986/SheCodes-Weather-React-App.git"
-          target="_blank"
-        ></a>
+        <Weather defaultCity="New York" />
       </div>
+      <footer>
+        <p>
+          This project was coded by Sahar.Q and is
+          <a
+            rel="noreferrer"
+            href="https://github.com/SaharQ1986/SheCodes-Weather-React-App.git"
+            target="_blank"
+          >
+            {" "}
+            Open-source on Github
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

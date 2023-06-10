@@ -14,12 +14,12 @@ function WeatherInfo(props) {
         <li>
           <FormattDate date={props.info.date} />
         </li>
-        <li className="text-capitalize">{props.infor.description}</li>
+        <li className="text-capitalize">{props.info.description}</li>
       </ul>
       <div className="row mt-3">
         <div className="col-6">
-          <div className="clearfix">
-            <WeatherIcon code={props.info.icon} className="float-left" />
+          <div className="float-left">
+            <WeatherIcon code={props.info.icon} />
             {/* <img
               src={props.info.icon}
               alt={props.info.description}

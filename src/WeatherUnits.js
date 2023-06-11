@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./Weather.css";
 
 function WeatherUnits(props) {
-  const [unit, setUnit] = useState("celsius ");
+  const [unit, setUnit] = useState("celsius");
 
   function convertFahrenheitHandler(e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ function WeatherUnits(props) {
     return (props.celsius * 9) / 5 + 32;
   }
 
-  if (unit === "celsius ") {
+  if (unit === "celsius") {
     return (
       <div className="WeatherUnits">
         <span className="temp">{Math.round(props.celsius)}</span>
@@ -50,17 +50,3 @@ function WeatherUnits(props) {
 }
 
 export default WeatherUnits;
-
-{
-  /* <div className="WeatherUnits">
-        <span className="temp">{Math.round(fahrenheit)}</span>
-        <span className="unit">
-          {" "}
-          <a href="/" onClick={convertCelsiusHandler}>
-            {" "}
-            °C{" "}
-          </a>{" "}
-          | °F
-        </span>
-      </div> */
-}

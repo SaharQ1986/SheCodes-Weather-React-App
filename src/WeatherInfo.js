@@ -19,7 +19,7 @@ function WeatherInfo(props) {
       <div className="row mt-3">
         <div className="col-6">
           <div className="float-left">
-            <WeatherIcon code={props.info.icon} />
+            <WeatherIcon code={props.info.icon} size={42} />
             {/* <img
               src={props.info.icon}
               alt={props.info.description}

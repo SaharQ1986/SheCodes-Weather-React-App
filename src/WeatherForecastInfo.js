@@ -1,6 +1,8 @@
 import React from "react";
 
 import WeatherIcon from "./WeatherIcon";
+import "bootstrap/dist/css/bootstrap.css";
+import "./Weather.css";
 
 function WeatherForecastInfo(props) {
   let maxTemp = Math.round(props.data.temp.max);
